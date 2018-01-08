@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0">
     <title>infinitus大售后师傅移动端</title>
 
     <style>
@@ -60,6 +61,11 @@
     <script>
         /*自适应屏幕*/
         document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+
+        window.onresize = function () {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+
     </script>
 </head>
 <body>
