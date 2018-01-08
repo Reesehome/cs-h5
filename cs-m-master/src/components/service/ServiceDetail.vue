@@ -1,17 +1,17 @@
 <template>
     <div id="serviceDetail">
         <!--页面头部-->
-        <div>
+        <div class="serviceDetail_head">
             <x-header class="header">工单详情</x-header>
         </div>
         <!--页面主体-->
-        <div>
+        <div class="serviceDetail_body">
             <!--工单简介-->
             <section class="service_head">
                 <flexbox>
                     <flexbox-item :span="3">
                         <div class="flex-demo serviceH_img">
-                            <img src=""/>
+                            <img src="" />
                             <div class="serviceH_img_status">保养</div>
                         </div>
                     </flexbox-item>
@@ -27,16 +27,20 @@
                 </flexbox>
             </section>
             <!-- tab栏工单基本信息 -->
-            <section>
-                <div>我是工单基本信息</div>
+            <section class="service_tab">
+                    <sticky scroll-box="vux_view_box_body" ref="sticky" :offset="46" :check-sticky-support="false">
+                        <tab :line-width="1">
+                            <tab-item selected>
+                                <router-link to="/service/ServiceDetail/ServiceBaseInfo">基本信息</router-link>
+                            </tab-item>
+                            <tab-item>
+                                <router-link to="/service/ServiceDetail/ServiceAbnInfo">异常信息</router-link>
+                            </tab-item>
+                        </tab>
+                    </sticky>
             </section>
             <!-- 工单详情 -->
-            <section>
-                <group>
-                    <cell title="上门联系信息"></cell>
-                    <cell-form-preview :list="list2"></cell-form-preview>
-                </group>
-            </section>
+            <router-view></router-view>
         </div>
         <!--页面底部-->
         <div class="bottom ">
@@ -53,12 +57,13 @@
 </template>
 
 <script>
-    import { XHeader, XButton, Flexbox, FlexboxItem, CellFormPreview, Group, Cell} from 'vux'
+    import { XHeader, XButton, Flexbox, FlexboxItem, CellFormPreview, Group, Cell, Tab, TabItem, Sticky } from 'vux'
     import Box from "vux/src/components/box/index";
 
     export default {
         data() {
             return {
+                showSpace: false,
                 list2: [{
                     label: '刘亮方',
                     value: '13533456679'
@@ -79,11 +84,22 @@
             FlexboxItem,
             CellFormPreview,
             Group,
-            Cell
+            Cell,
+            Tab,
+            TabItem,
+            Sticky
+        },
+        methods: {
+            spaceChange() {
+                this.showSpace = !this.showSpace
+                this.$nextTick(() => {
+                    this.$refs.sticky.bindSticky()
+                })
+            }
         }
     }
 </script>
 
 <style scoped>
-    @import url('../../assets/styles/ServiceDetail.less');
+    @import url('../../assets/styles/service/ServiceDetail.less');
 </style>

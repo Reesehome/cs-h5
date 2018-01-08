@@ -24,13 +24,7 @@
 *!
 @tabbar-text-active-color: #09BB07;
 
-!**
-* tab
-*!
-@tab-text-disabled-color: #ddd;
-@tab-text-default-color: #666;
-@tab-text-active-color: @theme-color;
-@tab-bar-active-color: @theme-color;
+
 
 !**
 * dialog
@@ -295,8 +289,15 @@
 
 /*上面为组件参考变量，需要调整的话自行复制到下方*/
 
+@theme-color: #5bb6ff;
 /*头部主题替换*/
-@header-background-color: #5bb6ff;
+@header-background-color: @theme-color;
 @header-title-color: #fff;
 @header-text-color: #ffffff;
 @header-arrow-color: #ffffff;
+
+/*tab栏主题替换*/
+@tab-text-disabled-color: #ddd;
+@tab-text-default-color: #666;
+@tab-text-active-color: @theme-color;
+@tab-bar-active-color: @theme-color;
