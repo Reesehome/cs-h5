@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import url('../theme.less');
+@import url('../base.less');
+/*页面公共样式*/
+#serviceDetail{
+    height: 100%;
+    background-color: #f3f6f8;
+    font-size: 0.28rem;
+}
+div,p,section{
+    box-sizing: border-box;
+}
+section{
+    margin-bottom: 0.2rem;
+    background-color: #fff;
+}
+.no-border-radius,
+.no-border-radius:after {
+    border-radius: unset;
+    border: unset;
+}
+/*页面头部*/
+
+/*订单简介*/
+.service_head {
+    position: relative;
+    height: 1.7rem;
+    padding: 0.1rem 0.2rem;
+}
+.serviceH_img {
+    position: relative;
+    left: 0.08rem;
+}
+.serviceH_img img{
+    display: block;
+    width: 1.48rem;
+    height: 1.48rem;
+    background: #eee;
+    border: 1px solid #5bb7ff;
+    border-radius: 0.05rem;
+}
+.serviceH_img_status{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0.76rem;
+    height: 0.38rem;
+    background: #82d687;
+    border: 1px solid #b9e3b9;
+    border-radius: 0.05rem 0 0 0;
+    line-height: 0.38rem;
+    font-size: 0.22rem;
+    text-align:center;
+    color: #fff;
+}
+.serviceH_content{
+    margin-top: -0.11rem;
+}
+.serviceH_content p{
+    line-height: 0.48rem;
+    color: #4b4b4b;
+}
+.serviceH_content .serviceH_content_product{
+    font-size: 0.32rem;
+    color: #000;
+}
+.serviceH_content_aftersales{
+    position: absolute;
+    top: 0.1rem;
+    right: 0.2rem;
+    border: 1px solid #5bb7ff;
+    border-radius: 0.06rem;
+    font-size: 0.22rem;
+    color: #5bb7ff;
+    padding: 0.1rem 0.06rem;
+}
+.serviceH_content_copy{
+    position: absolute;
+    top: 1rem;
+    right:0.2rem;
+    border: 1px solid #a7d257;
+    border-radius: 0.06rem;
+    font-size: 0.22rem;
+    color: #a7d257;
+    padding: 0.08rem 0.26rem;
+}
+/*tab栏*/
+.service_tab{
+    padding: 0 0.2rem;
+    margin-bottom: 0;
+}
+.vux-tab{
+    height: 0.66rem;
+}
+.vux-tab .vux-tab-item{
+    line-height: 0.66rem;
+}
+.vux-tab .vux-tab-item a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.vux-tab .vux-tab-item.vux-tab-selected{
+    color: #5ab6ff;
+    border-bottom: 0.03rem solid #5ab6ff;
+}
+.vux-tab-ink-bar{
+    background-color: #5ab6ff !important;
+}
+/*页面底部*/
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

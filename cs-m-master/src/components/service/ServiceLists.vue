@@ -2,13 +2,13 @@
     <div>
         <group>
             <cell>
-                <router-link to="/service/ServiceDetail">工单详情</router-link>
+                <router-link to="/service/ServiceDetail/ServiceBaseInfo">工单详情</router-link>
             </cell>
             <cell>
-                <router-link to="/service/ServiceDetail">工单详情</router-link>
+                <router-link to="/service/ServiceDetail/ServiceBaseInfo">工单详情</router-link>
             </cell>
             <cell>
-                <router-link to="/service/ServiceDetail">工单详情</router-link>
+                <router-link to="/service/ServiceDetail/ServiceBaseInfo">工单详情</router-link>
             </cell>
         </group>
     </div>

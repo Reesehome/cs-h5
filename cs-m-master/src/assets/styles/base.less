@@ -42,12 +42,16 @@ input, textarea, button {
 }
 
 //媒体查询
-@media screen and (width: 750px) {
+@media screen and (max-width: 750px) {
     html {
         font-size: 100px;
     }
 }
-
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 50px;
+    }
+}
 // 页面背景色
 .bg-color-def {
     background-color: #f4f5f9;
