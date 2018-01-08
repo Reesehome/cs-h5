@@ -20,7 +20,15 @@
                         <img :src="img.avatar"/>
                     </div>
                     <div class="form">
-
+                        <x-input name="mobile" placeholder="手机号码" class="input-center" keyboard="number"
+                                 is-type="china-mobile">
+                        </x-input>
+                        <x-input name="mobile" placeholder="验证码" class="input-center" keyboard="number"
+                                 is-type="china-mobile">
+                        </x-input>
+                    </div>
+                    <div class="button">
+                        <x-button class="submit-btn" type="warn">登 录</x-button>
                     </div>
                 </div>
             </section>
@@ -29,7 +37,7 @@
 </template>
 
 <script>
-    import {XHeader, XButton, Flexbox, FlexboxItem, CellFormPreview, Group, Cell} from 'vux'
+    import {XHeader, XButton, Flexbox, FlexboxItem, CellFormPreview, Group, Cell, XInput} from 'vux'
 
     export default {
         data() {
@@ -43,11 +51,9 @@
         components: {
             XButton,
             XHeader,
-            Flexbox,
-            FlexboxItem,
-            CellFormPreview,
             Group,
-            Cell
+            Cell,
+            XInput
         }
     }
 </script>

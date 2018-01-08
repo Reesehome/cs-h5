@@ -11,6 +11,7 @@
 }
 
 div, p, section {
+    text-align: center;
     box-sizing: border-box;
 }
 
@@ -23,11 +24,17 @@ div, p, section {
 #login-block {
     position: relative;
     height: 3.52rem;
-    /*width: 6.58rem;*/
+    width: 6.58rem;
+    margin: 0.44rem auto 0 auto;
+    background-color: #ffffff;
+    border-radius: 0.18rem;
+    box-shadow: 0 0.018rem 0.1rem rgba(205, 205, 206, 0.5);
 }
 
 #login-block .avatar {
-
+    position: absolute;
+    width: 100%;
+    top: -0.44rem;
 }
 
 #login-block .avatar > img {
@@ -35,3 +42,38 @@ div, p, section {
     width: 1.5rem;
     height: 1.5rem;
 }
+
+#login-block .form {
+    /*margin: 0 0.28rem;*/
+    position: absolute;
+    bottom: 0.38rem;
+    width: 100%;
+}
+
+#login-block .form .input-block {
+}
+
+#login-block .button {
+    position: absolute;
+    width: 100%;
+    bottom: -1.04rem;
+}
+
+#login-block .submit-btn {
+    background-color: #5bb6ff;
+    width: 6rem;
+    height: 0.8rem;
+    box-shadow: 0.02rem 0.02rem 0.2rem rgba(91, 182, 255, 0.75);
+}
+
+#login-block .submit-btn:after {
+    border: unset;
+    border-radius: 0.1rem;
+}
+
+/*Vux XInput 样式覆盖 START*/
+
+#login-block .weui-input {
+    text-align: center;
+}
+/********** END ***********/
