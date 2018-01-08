@@ -60,12 +60,12 @@
     </style>
     <script>
         /*自适应屏幕*/
-        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
-
-        window.onresize = function () {
+        function screenAdaptable() {
             document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
         }
 
+        window.onresize = screenAdaptable;
+        screenAdaptable();
     </script>
 </head>
 <body>
