@@ -4,7 +4,6 @@
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, section, input, textarea, p, blockquote, th, td {
     margin: 0;
     padding: 0;
-    line-height: 1;
 }
 
 body {
@@ -18,6 +17,7 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 ul, ol {
@@ -40,19 +40,7 @@ input, textarea, button {
     /*消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式*/
     -webkit-appearance: none;
 }
-
-//媒体查询
-@media screen and (max-width: 750px) {
-    html {
-        font-size: 100px;
-    }
-}
-@media screen and (max-width: 375px) {
-    html {
-        font-size: 50px;
-    }
-}
-// 页面背景色
+/*页面背景色*/
 .bg-color-def {
     background-color: #f4f5f9;
 }
