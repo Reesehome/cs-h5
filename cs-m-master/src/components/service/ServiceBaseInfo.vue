@@ -8,16 +8,16 @@
                 <router-link to="" class="baseInfo_btn">让顾客评价服务</router-link>
             </div>
         </div>
-        <div class="service_infoCard">
-            <group class="service_infoCard_item">
+        <div class="cell_infoCard">
+            <group class="cell_infoCard_item">
                 <cell title="上门联系信息"></cell>
                 <cell-form-preview :list="infoCard.contactInfo"></cell-form-preview>
             </group>
-            <group class="service_infoCard_item">
+            <group class="cell_infoCard_item">
                 <cell title="上门联系信息"></cell>
                 <cell-form-preview :list="infoCard.contactInfo"></cell-form-preview>
             </group>
-            <group class="service_infoCard_item">
+            <group class="cell_infoCard_item">
                 <cell title="上门联系信息"></cell>
                 <cell-form-preview :list="infoCard.contactInfo"></cell-form-preview>
             </group>

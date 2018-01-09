@@ -9,11 +9,14 @@ import {AlertPlugin, ToastPlugin, AjaxPlugin} from 'vux'
 import FastClick from 'fastclick'
 import { Field } from 'mint-ui'
 
+/*自定义vue插件************************************/
 import Toast from '@cmpt/common/vue-plugin.js';
+/*************************************************/
 
 /***引入全局样式 START***/
 
 import '@styles/base.less';
+import '@styles/style.less'; // 全局公共样式
 import '@cmpt/common/vue-plugin.less';
 import 'mint-ui/lib/style.css'
 

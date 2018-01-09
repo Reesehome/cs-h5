@@ -5,6 +5,7 @@ import ServiceLists from '@/components/service/ServiceLists'
 import ServiceDetail from '@/components/service/ServiceDetail'
 import ServiceBaseInfo from '@/components/service/ServiceBaseInfo'
 import ServiceAbnInfo from '@/components/service/ServiceAbnInfo'
+import HomeIndex from '@/components/home/Index'
 Vue.use(Router);
 
 export default new Router({
@@ -25,6 +26,10 @@ export default new Router({
                 {path: 'ServiceBaseInfo', name: 'ServiceBaseInfo',component: ServiceBaseInfo},
                 {path: 'ServiceAbnInfo', name: 'ServiceAbnInfo',component: ServiceAbnInfo},
             ]
+        },{
+            path: '/home/index',
+            name: 'HomeIndex',
+            component: HomeIndex,
         }
     ]
 })

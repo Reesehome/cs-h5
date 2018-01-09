@@ -24,7 +24,8 @@
                             <mt-field class="input-center" v-model="form.phone" placeholder="手机号" type="tel"></mt-field>
                         </div>
                         <div class="input-block">
-                            <mt-field style="position: relative" v-model="form.verifyCode" max-length="6" class="input-center" placeholder="验证码"
+                            <mt-field style="position: relative" v-model="form.verifyCode" max-length="6"
+                                      class="input-center" placeholder="验证码"
                                       type="number">
                                 <div class="verify-code">
                                     <a href="javascript:void(0)" @click="getVerifyCode"
@@ -34,7 +35,7 @@
                         </div>
                     </div>
                     <div class="button">
-                        <x-button class="submit-btn" type="normal">登 录</x-button>
+                        <x-button class="submit-btn" @click.native="doLogin" type="normal">登 录</x-button>
                     </div>
                 </div>
             </section>
@@ -49,8 +50,8 @@
         data() {
             return {
                 form: {
-                    phone: null,
-                    verifyCode: null,
+                    phone: '15622284448',
+                    verifyCode: '1234',
                 },
                 msg: {
                     verify: {
@@ -93,6 +94,30 @@
                     }, 1000);
                 }
             },
+            // 登录操作
+            doLogin() {
+                // 再次做手机号校验操作
+                if (this.verifyPhone() && this.verifyCode()) {
+                    /**
+                     * TODO 请求登录接口
+                     */
+
+                    // 模拟登录成功
+                    this.$router.push({path: '/home/index'})
+                }
+            },
+            /**
+             * 校验验证码是否正确
+             * @param code
+             */
+            verifyCode(code = this.form.verifyCode) {
+                // 校验验证码 4~6 位 字母或数字
+                let pass = /^[0-9A-Za-z]{4,6}$/.test(code) && code !== null;
+                if (!pass) {
+                    this.$toast('验证码格式错误');
+                }
+                return pass;
+            },
             /**
              * 校验手机号
              * @param phone
@@ -101,7 +126,7 @@
                 /**
                  * TODO 手机号码校验规则
                  */
-                let pass = /^1\d{10}$/.test(phone);
+                let pass = /^1\d{10}$/.test(phone) && phone !== null;
                 if (!pass) {
                     this.$toast('手机号码不正确');
                 }
@@ -119,5 +144,5 @@
 </script>
 
 <style scoped>
-    @import url('../../assets/styles/login.less');
+    @import url('../../assets/styles/login/login.less');
 </style>
