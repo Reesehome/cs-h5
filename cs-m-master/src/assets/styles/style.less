@@ -1,7 +1,52 @@
 /*全局公共样式*/
 @charset "UTF-8";
 
-/*工单信息卡片*/
+/*页面背景色*/
+.bg-color-def {
+    background-color: #f4f5f9;
+}
+
+/*背景透明*/
+.transparent {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*输入框input/x-input文字居中*/
+.input-center, .input-center input {
+    text-align: center !important;
+    font-weight: 500;
+    font-family: '华文细黑';
+}
+
+/*********Mint UI 样式覆盖 START********/
+
+.mint-cell, .mint-cell-wrapper {
+    background-image: unset !important;
+}
+
+/**********Mint UI 样式覆盖 END*********/
+
+/*********浏览器组件样式覆盖 START********/
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #b3b3b3;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #b3b3b3;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #b3b3b3;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #b3b3b3;
+}
+
+/**********浏览器组件样式覆盖 END*********/
+
+/*信息卡片*/
 .cell_infoCard {
     background: #fff;
 }
