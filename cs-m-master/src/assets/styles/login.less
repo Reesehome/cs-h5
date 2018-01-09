@@ -46,11 +46,16 @@ div, p, section {
 #login-block .form {
     /*margin: 0 0.28rem;*/
     position: absolute;
-    bottom: 0.38rem;
+    bottom: 0.15rem;
     width: 100%;
 }
 
 #login-block .form .input-block {
+    margin: 0 0.28rem;
+}
+
+#login-block .form .input-block:first-child {
+    border-bottom: 1px solid #e6e6e6;
 }
 
 #login-block .button {
@@ -71,9 +76,32 @@ div, p, section {
     border-radius: 0.1rem;
 }
 
-/*Vux XInput 样式覆盖 START*/
-
-#login-block .weui-input {
-    text-align: center;
+#login-block .verify-code {
+    position: absolute;
+    right: 0;
+    width: 1.8rem;
+    transform: translate(-0%, -50%);
+    height: 0.40rem;
+    line-height: 0.40rem;
+    background-color: #ffffff;
 }
-/********** END ***********/
+
+#login-block .verify-code:before {
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    left: -10px;
+    width: 1px;
+    background-color: #e6e6e6;
+}
+
+
+#login-block .verify-code a {
+    /*font-size: 0.22rem;*/
+    font-family: '华文细黑';
+    color: #5bb6ff;
+}
+
+#login-block .verify-code a.wait {
+    color: #b3b3b3;
+}

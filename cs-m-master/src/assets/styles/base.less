@@ -47,11 +47,13 @@ input, textarea, button {
         font-size: 100px;
     }
 }
+
 @media screen and (max-width: 375px) {
     html {
         font-size: 50px;
     }
 }
+
 // 页面背景色
 .bg-color-def {
     background-color: #f4f5f9;
@@ -65,4 +67,34 @@ input, textarea, button {
 /*输入框input/x-input文字居中*/
 .input-center, .input-center input {
     text-align: center !important;
+    font-weight: 500;
+    font-family: '微软雅黑 Light';
 }
+
+/*********Mint UI 样式覆盖 START********/
+
+.mint-cell, .mint-cell-wrapper {
+    background-image: unset !important;
+}
+
+/**********Mint UI 样式覆盖 END*********/
+
+/*********浏览器组件样式覆盖 START********/
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #b3b3b3;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #b3b3b3;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #b3b3b3;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #b3b3b3;
+}
+
+/**********浏览器组件样式覆盖 END*********/

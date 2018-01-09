@@ -31,6 +31,7 @@ const webpackConfig = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src'),
+            '@aset':  resolve('src/assets'), //公用样式路径
             '@styles': resolve('src/assets/styles'), //公用样式路径
             '@cmpt': resolve('src/components'), //公用样式路径
             '@pages': resolve('src/pages'), //公用样式路径

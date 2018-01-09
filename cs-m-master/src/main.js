@@ -7,10 +7,18 @@ import router from './router'
 import Vuex from 'vuex'
 import {AlertPlugin, ToastPlugin, AjaxPlugin} from 'vux'
 import FastClick from 'fastclick'
+import { Field } from 'mint-ui'
+
+import Toast from '@cmpt/common/vue-plugin.js';
 
 /***引入全局样式 START***/
-import './assets/styles/base.less';
+
+import '@styles/base.less';
+import '@cmpt/common/vue-plugin.less';
+import 'mint-ui/lib/style.css'
+
 /********* END *********/
+Vue.use(Toast);
 
 Vue.use(AlertPlugin);
 Vue.use(ToastPlugin);
@@ -45,8 +53,10 @@ router.afterEach(function (to) {
 
 Vue.config.productionTip = false;
 
+Vue.component(Field.name, Field);
+
 /* eslint-disable no-new */
-new Vue({
+const vm = new Vue({
     el: '#app',
     store,
     router,
