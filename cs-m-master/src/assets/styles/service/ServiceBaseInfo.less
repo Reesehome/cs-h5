@@ -24,9 +24,6 @@ div, p, section{
     background: #fff;
     text-align: left;
 }
-.service_baseInfo_time{
-    padding-left: 0.36rem;
-}
 .service_baseInfo_btn{
     position: absolute;
     right: 0;
@@ -36,26 +33,65 @@ div, p, section{
     padding-top: 0.82rem;
     padding-left: 0.3rem;
 }
+.service_baseInfo .weui-cell{
+    padding:0;
+    padding-left: 0.36rem;
+}
+.service_baseInfo .weui-form-preview__value,
+.service_baseInfo .weui-form-preview__label{
+    margin-right: 0;
+    font-size: 0.26rem
+}
 .baseInfo_btn{
     font-size: 0.22rem;
     padding: 0.2rem 0.1rem;
     background: #60b7fc;
     border-radius: 0.08rem;
+    box-shadow: 0 0.02rem 0.1rem rgba(91, 182, 255, 0.75);
     color: #fff;
 }
-.weui-form-preview__bd{
-    line-height: 0.46rem;
-}
-.weui-form-preview__label{
-    line-height: 0.46rem;
+.service_baseInfo .weui-form-preview__bd,
+.service_infoCard .weui-form-preview__bd{
+    line-height: 0.48rem;
 }
 /*工单信息卡片*/
 .service_infoCard{
     background: #fff;
 }
 .service_infoCard_item{
-    padding: 0.2rem;
+    padding: 0 0.2rem;
+    font-size: 0.26rem;
+}
+.service_infoCard_item .weui-cells{
+    margin-top: 0;
+}
+.service_infoCard_item .vux-cell-primary{
+    padding-left: 0.1rem;
+    border-left: 0.05rem solid #54a1de;
+}
+.service_infoCard_item .weui-cell{
+    text-align: left;
+    color: #54a1de;
+    padding-left: 0.05rem;
+    border-top: 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.service_infoCard_item .weui-form-preview__label,
+.service_infoCard_item .weui-form-preview__value{
+    font-size: 0.26rem;
+}
+.service_infoCard_item .weui-cell .vux-label{
+    font-size: 0.28rem;
 }
 .vux-no-group-title{
     margin-top: 0;
+}
+.service_infoCard_item .weui-cell:before{
+    border-top: 0;
+}
+.weui-cells.vux-no-group-title:before{
+    border-top: 0;
+}
+.weui-form-preview__value{
+    text-align: left;
 }

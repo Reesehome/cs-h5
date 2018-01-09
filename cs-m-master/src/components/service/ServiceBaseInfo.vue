@@ -66,6 +66,6 @@
         }
     }
 </script>
-<style scoped>
+<style>
     @import url('../../assets/styles/service/ServiceBaseInfo.less');
 </style>

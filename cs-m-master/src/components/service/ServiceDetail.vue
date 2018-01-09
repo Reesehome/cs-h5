@@ -28,7 +28,7 @@
             </section>
             <!-- tab栏工单基本信息 -->
             <section class="service_tab">
-                    <sticky scroll-box="vux_view_box_body" ref="sticky" :offset="46" :check-sticky-support="false">
+                    <sticky scroll-box="service_tab" ref="sticky" :offset="46" :check-sticky-support="false">
                         <tab :line-width="1">
                             <tab-item selected>
                                 <router-link to="/service/ServiceDetail/ServiceBaseInfo">基本信息</router-link>
